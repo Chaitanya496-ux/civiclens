@@ -1,0 +1,6 @@
+tender_id,department,project_type,estimated_cost,awarded_cost,bidders_count,vendor,region
+T101,Roads,Road Construction,10000000,14500000,1,ABC Infra,North
+T102,Water,Pipeline,8000000,8200000,4,HydroWorks,East
+T103,Health,Hospital Renovation,12000000,18000000,1,ABC Infra,North
+T104,Urban,Housing,15000000,15500000,3,BuildFast,West
+T105,Education,School Repair,5000000,5400000,2,BuildFast,West

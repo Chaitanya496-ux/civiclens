@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CivicLens Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>CivicLens</h1>
+  <p>Public Tender Transparency & Risk Detection</p>
+</header>
+
+<nav>
+  <button onclick="showSection('dashboard')">Dashboard</button>
+  <button onclick="showSection('analytics')">Analytics</button>
+</nav>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="active">
+  <div class="summary">
+    <div class="card high">High Risk <span id="highRisk">0</span></div>
+    <div class="card medium">Medium Risk <span id="mediumRisk">0</span></div>
+    <div class="card low">Low Risk <span id="lowRisk">0</span></div>
+  </div>
+
+  <div class="filters">
+  <button class="filter-btn active all" onclick="filterRisk('All', this)">All</button>
+  <button class="filter-btn high" onclick="filterRisk('High', this)">High</button>
+  <button class="filter-btn medium" onclick="filterRisk('Medium', this)">Medium</button>
+  <button class="filter-btn low" onclick="filterRisk('Low', this)">Low</button>
+</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tender</th>
+        <th>Dept</th>
+        <th>Vendor</th>
+        <th>Bidders</th>
+        <th>Deviation</th>
+        <th>Risk</th>
+      </tr>
+    </thead>
+    <tbody id="tenderTable"></tbody>
+  </table>
+</section>
+
+<!-- ANALYTICS -->
+<section id="analytics">
+  <h2>Risk Analytics</h2>
+  <canvas id="riskChart"></canvas>
+</section>
+
+<!-- MODAL -->
+<div id="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()">×</span>
+    <h3>Risk Explanation</h3>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
