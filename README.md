@@ -1,3 +1,4 @@
+
 # CivicLens – Public Tender Transparency Tool
 
 ## Problem
@@ -22,3 +23,6 @@ CivicLens detects high-risk tender patterns using rule-based analysis:
 - NLP on tender documents
 - Vendor network analysis
 - Predictive risk alerts
+=======
+# civiclens
+Hack4Delhi
